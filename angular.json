@@ -23,13 +23,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -60,6 +55,27 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "en": {
+              "aot": true,
+              "i18nFile": "src/locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "aot": true,
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "hi": {
+              "aot": true,
+              "i18nFile": "src/locale/messages.hi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "hi",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -71,6 +87,15 @@
           "configurations": {
             "production": {
               "browserTarget": "test-angular-language:build:production"
+            },
+            "en": {
+              "browserTarget": "test-angular-language:build:en"
+            },
+            "es": {
+              "browserTarget": "test-angular-language:build:es"
+            },
+            "hi": {
+              "browserTarget": "test-angular-language:build:hi"
             }
           }
         },
@@ -87,13 +112,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -105,9 +125,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -123,6 +141,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "test-angular-language"
+    }
+  },
+  "defaultProject": "test-angular-language",
+  "cli": {
+    "analytics": "ac402e60-c99d-4d9e-b1f4-4cb81373c883"
+  }
 }
